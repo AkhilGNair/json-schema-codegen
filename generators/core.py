@@ -9,6 +9,9 @@ class GeneratorNotFoundException(Exception):
 
 
 def load_external_generator(filename: Path):
+    if filename.is_dir():
+        raise IsADirectoryError(filename)
+
     module_name = filename.stem
     klass_name = "".join(s.capitalize() for s in module_name.split("_"))
     filename_str = str(filename)

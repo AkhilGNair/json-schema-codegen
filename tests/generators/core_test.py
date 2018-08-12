@@ -28,3 +28,8 @@ def test_load_external_generator_file_not_found():
 
     with pytest.raises(FileNotFoundError):
         load_external_generator(filename)
+
+
+def test_load_external_generator_path_is_not_a_file():
+    with pytest.raises(IsADirectoryError):
+        load_external_generator(fixture_dir)

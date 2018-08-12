@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from argparse import ArgumentParser
+from pathlib import Path
 import sys
 
 import generators
@@ -55,7 +56,7 @@ def main():
 
     # Generate code
     if args.generator:
-        generator = generators.load_external_generator(args.generator)
+        generator = generators.load_external_generator(Path(args.generator))
     else:
         generator = get_generator(args.language)
 
