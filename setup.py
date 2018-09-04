@@ -19,10 +19,6 @@ setup(
     entry_points={"console_scripts": ["json_codegen = json_codegen:main"]},
     python_requires=">=3",
     license="MIT",
-    install_requires=[
-        "astor==0.7.1",
-        "pathlib2==2.3.0",
-        "setuptools>={}".format(SETUPTOOLS_MIN_VER),
-    ],
+    install_requires=["astor==0.7.1", "pathlib2==2.3.0"],
     scripts=["bin/ast_to_js"],
 )
