@@ -1,6 +1,7 @@
 import astor
 
-from .ast import python as ast
+from ..ast import python as ast
+
 from .core import SchemaParser, BaseGenerator
 
 

@@ -1,7 +1,8 @@
 import json
 
+from ..ast import javascript as ast
+
 from .core import SchemaParser, BaseGenerator
-from .ast import javascript as ast
 from .js_utils import get_type_annotation
 
 
